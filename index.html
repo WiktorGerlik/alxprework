@@ -68,6 +68,13 @@
     list.addEventListener('click', event => {
       if(event.target.tagName === 'INPUT') {
         event.target.parentElement.remove();
+
+        const productNameToFilterOut = event.target.parentElement.innerText;
+        console.log(productNameToFilterOut);
+
+        // 1. Odfilrowac z shopping
+        // 2. wywolac funkcje calculateSum z nowa lista produktow
+        // 3. Wrzucic to do HTML
       }
 
       // Dorobic filtrowanie
