@@ -32,7 +32,7 @@ const books = [
   
   console.log(erBooks);
 //3
-const letterFromBooks = books.map(book => {
+const letterFromBooks = books.map(book => {//zwraca tablicę z ilością liter każdego book
   return book.name.length
 });
 console.log(letterFromBooks);
