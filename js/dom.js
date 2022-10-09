@@ -105,13 +105,28 @@
 
 // 1. Stworz w HTML element button, a nastepnie w JS spraw, zeby po kliknieciu w przycisk, pojawil sie alert "Hello World!"
 
-const hello1 = document.querySelector('#hello');
-element.addEventListener('click', (event) => {
-    alert('Hello world!');
+const helloWorldButton = document.querySelector('#btn1');
+
+helloWorldButton.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  alert('Hello World!');
 })
 
 // 2. Stworz w HTML drugi button, ktory po kliknieciu, doda do HTML element p z trescia "Kurs ALX wiele mnie uczy".
 
+const addTextButton = document.querySelector('#btn2');
+const body = document.querySelector('body');
 
+addTextButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  body.innerHTML += '<p> Kurs ALX wiele mnie uczy. </p>'
+})
 
 // 3. Za pomoca JS, dodaj do wszystkich elementow h1, klase .warning. Dodaj w CSS obsluge klasy, zeby tekst z ta klasa byl czerwony
+
+const allHeadings = document.querySelectorAll('h1');
+
+allHeadings.forEach(heading => {
+  heading.classList.add('warning');
+})
