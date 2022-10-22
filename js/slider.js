@@ -34,7 +34,7 @@ const slides = [
       `
     })
   }
-  
+  // ten zapis ${index === activeSlide ? 'active' : ''} oznacza: jeśli index to jest activeSlide to dodaj klasę active, a w przeciwnym wypadku nie dodawaj nic
   btnNext.addEventListener('click', (event) => {
     event.preventDefault();
   
